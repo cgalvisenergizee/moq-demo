@@ -11,7 +11,9 @@ dotnet new sln -n MoqDemo
 dotnet new webapi -n WebApi
 # Make testing project with Nunit
 dotnet new nunit -n Tests
-# Add rpjects to solution
+# Add moq dependency in Tests project
+dotnet add src/Tests/Tests.csproj package moq
+# Add projects to solution
 dotnet sln add WebApi/WebApi.csproj
 dotnet sln add Tests/Tests.csproj
 # Link test project to main project
@@ -25,4 +27,5 @@ rm WebApi/WeatherForecast.cs WebApi/Controllers/WeatherForecastController.cs
 ## Add files
 
 ```bash
+
 ```

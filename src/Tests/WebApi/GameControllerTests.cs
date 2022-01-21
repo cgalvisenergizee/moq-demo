@@ -12,7 +12,6 @@ namespace Tests.WebApi
     public class GameControllerTests
     {
         private IGameService _gameService;
-        //private GameController _gameController;
 
         [SetUp]
         public void SetUp()

@@ -1,21 +1,28 @@
-# Mocks en pruebas unitarias 
+# .NET unit testing with Moq
 
-# Crear proyecto base
+## Make base project
 
 ```bash
-# Crear una carpeta para el proyecto
+# Make source folder
 mkdir src && cd src
-# Crear solución
+# make solution
 dotnet new sln -n MoqDemo
-# Crear proyecto de consola con .net
-dotnet new console -n Program
-# Crear proyecto de pruebas con Nunit
+# Make asp.net project
+dotnet new webapi -n WebApi
+# Make testing project with Nunit
 dotnet new nunit -n Tests
-# Agregar proyectos a la solución
-dotnet sln add Program/Program.csproj
+# Add rpjects to solution
+dotnet sln add WebApi/WebApi.csproj
 dotnet sln add Tests/Tests.csproj
-# Vincular proyecto de pruebas al proyecto base
-dotnet add Tests/Tests.csproj reference Program/Program.csproj
-# Restaurar paquetes de NuGet
+# Link test project to main project
+dotnet add Tests/Tests.csproj reference WebApi/WebApi.csproj
+# Restore NuGet packages
 dotnet restore
+# Delete default files
+rm WebApi/WeatherForecast.cs WebApi/Controllers/WeatherForecastController.cs
+```
+
+## Add files
+
+```bash
 ```
